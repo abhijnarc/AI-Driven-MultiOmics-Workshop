@@ -1,0 +1,22 @@
+# Workshop dependencies — Notebook 1: TCGA-BRCA VAE Disease Subtyping
+# Install with: pip install -r requirements.txt
+
+# Core scientific Python
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+
+# Machine learning
+scikit-learn>=1.3
+torch>=2.0          # CPU-only installation: pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+# Visualisation
+matplotlib>=3.7
+seaborn>=0.12
+
+# Dimensionality reduction
+umap-learn>=0.5
+
+# Jupyter
+ipykernel>=6.0
+notebook>=7.0

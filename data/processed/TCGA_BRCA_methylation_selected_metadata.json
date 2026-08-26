@@ -1,0 +1,20 @@
+{
+  "source_file": "TCGA_BRCA_methylation.tsv.gz",
+  "source_xena_id": "TCGA.BRCA.sampleMap/HumanMethylation450",
+  "source_size_mb": 783.2,
+  "original_n_probes": 485577,
+  "probes_skipped_all_nan": 88058,
+  "probes_skipped_too_missing": 390,
+  "n_common_samples": 619,
+  "n_selected_probes": 1000,
+  "selection_method": "top 1000 by variance across 619 common samples",
+  "missing_value_filter": "probes with >20% NaN across common samples removed",
+  "output_shape": [
+    619,
+    1000
+  ],
+  "output_missing_cells": 1166,
+  "output_missing_pct": 0.1884,
+  "value_type": "beta values [0, 1]",
+  "saved_as": "data/processed/TCGA_BRCA_methylation_selected.tsv"
+}

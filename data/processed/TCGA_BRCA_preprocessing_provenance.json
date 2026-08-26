@@ -1,0 +1,94 @@
+{
+  "created": "2026-08-26",
+  "cohort": {
+    "n_samples": 617,
+    "description": "617 TCGA-BRCA primary tumour samples, frozen cohort v1",
+    "source_file": "TCGA_BRCA_cohort_metadata.tsv"
+  },
+  "modalities": {
+    "RNA-seq": {
+      "xena_dataset": "TCGA.BRCA.sampleMap/HiSeqV2",
+      "xena_unit": "log2(RSEM normalized count + 1)",
+      "notebook_transform": "NONE \u2014 Xena values used as-is",
+      "original_features": 20530,
+      "step1_removed": {
+        "rule": "variance < 0.01",
+        "n_removed": 684
+      },
+      "step2_selected": {
+        "rule": "top 1000 by variance",
+        "variance_threshold": 4.247408
+      },
+      "final_features": 1000,
+      "missing_values": 0,
+      "output_file": "TCGA_BRCA_RNA_selected.tsv",
+      "value_range": [
+        0.0,
+        20.9784
+      ]
+    },
+    "miRNA": {
+      "xena_dataset": "TCGA.BRCA.sampleMap/miRNA_HiSeq_gene",
+      "xena_unit": "log2(RPM + 1)",
+      "notebook_transform": "NONE \u2014 Xena values used as-is",
+      "original_features": 2238,
+      "step1_removed": {
+        "rule": ">50% NaN across samples",
+        "n_removed": 1526
+      },
+      "step2_imputed": {
+        "rule": "per-feature median imputation for remaining NaN"
+      },
+      "step3_removed": {
+        "rule": "variance < 0.01",
+        "n_removed": 0
+      },
+      "step4_selected": {
+        "rule": "top 300 by variance",
+        "variance_threshold": 0.833488
+      },
+      "final_features": 300,
+      "missing_values": 0,
+      "output_file": "TCGA_BRCA_miRNA_selected.tsv",
+      "value_range": [
+        0.0639,
+        18.8961
+      ]
+    },
+    "methylation": {
+      "xena_dataset": "TCGA.BRCA.sampleMap/HumanMethylation450",
+      "xena_unit": "beta values [0, 1]",
+      "notebook_transform": "NONE \u2014 beta values used as-is",
+      "original_features": 485577,
+      "step1_removed": {
+        "rule": "rs* SNP/control probes excluded",
+        "n_removed": 3156
+      },
+      "step2_removed": {
+        "rule": "all-NaN probes",
+        "n_removed": 88058
+      },
+      "step3_removed": {
+        "rule": ">20% NaN across common samples",
+        "n_removed": 390
+      },
+      "step4_selected": {
+        "rule": "top 1000 cg* probes by variance (chunked pass)"
+      },
+      "step5_imputed": {
+        "rule": "per-probe median imputation, 1166 cells"
+      },
+      "final_features": 1000,
+      "missing_values": 0,
+      "output_file": "TCGA_BRCA_methylation_selected.tsv",
+      "value_range": [
+        0.0056,
+        0.9921
+      ]
+    }
+  },
+  "total_features_before": 23768,
+  "total_features_after": 2300,
+  "next_step": "Per-modality StandardScaler \u2192 concatenation \u2192 VAE training",
+  "notes": "No additional log transformation was applied to RNA-seq or miRNA. The Xena HiSeqV2 and miRNA_HiSeq_gene datasets are already delivered as log2(RSEM+1) and log2(RPM+1) respectively. PAM50 labels were not used at any preprocessing step."
+}

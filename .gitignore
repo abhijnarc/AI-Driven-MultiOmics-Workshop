@@ -1,0 +1,56 @@
+# ── Raw TCGA data (large, must not be committed) ──────────────────────────────
+data/raw/
+*.tsv.gz
+*.csv.gz
+*.zip
+
+# ── Large processed matrices (too large for Git; regenerate from raw + notebook)
+# Individual large files excluded:
+data/processed/TCGA_BRCA_RNA_selected.tsv
+data/processed/TCGA_BRCA_miRNA_selected.tsv
+data/processed/TCGA_BRCA_methylation_selected.tsv
+# Small TSVs that ARE tracked (cohort metadata, latent coords):
+# data/processed/TCGA_BRCA_cohort_metadata.tsv   ← tracked
+# data/processed/TCGA_BRCA_VAE_latent.tsv         ← tracked
+
+# ── Model checkpoints and binary weights ──────────────────────────────────────
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Virtual environments ───────────────────────────────────────────────────────
+.venv/
+.venv-1/
+venv/
+env/
+
+# ── Secrets and credentials ───────────────────────────────────────────────────
+.env
+.env.*
+*.pem
+*.key
+
+# ── OS / editor artefacts ─────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+
+# ── NOT ignored (explicitly tracked):
+# notebooks/
+# README.md
+# data/README.md
+# environment.yml
+# requirements.txt
+# data/processed/*.json     (small provenance/metadata files)
+# data/processed/*.png      (result figures)

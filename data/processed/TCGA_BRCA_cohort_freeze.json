@@ -1,0 +1,77 @@
+{
+  "cohort_name": "TCGA-BRCA frozen cohort v1",
+  "freeze_date": "2026-08-26",
+  "final_cohort_size": 617,
+  "description": "617 unique TCGA-BRCA primary tumour samples present in all three molecular modalities: RNA-seq, miRNA, and DNA methylation (HM450).",
+  "inclusion_rule": "Sample must (1) be a primary solid tumour (TCGA sample type code -01), (2) have a sample barcode present in all three raw modality files downloaded from UCSC Xena TCGA Hub.",
+  "excluded_samples": [
+    {
+      "sample_id": "TCGA-BH-A18V-06",
+      "patient_id": "TCGA-BH-A18V",
+      "reason": "Metastatic sample (type code -06); not a primary solid tumour."
+    },
+    {
+      "sample_id": "TCGA-BH-A1FD-01",
+      "patient_id": "TCGA-BH-A1FD",
+      "reason": "Primary tumour sample absent from the miRNA modality (TCGA.BRCA.sampleMap/miRNA_HiSeq_gene); the patient's miRNA was never sequenced."
+    }
+  ],
+  "source_datasets": {
+    "RNA-seq": {
+      "xena_id": "TCGA.BRCA.sampleMap/HiSeqV2",
+      "hub": "https://tcga.xenahubs.net",
+      "unit": "log2(RSEM normalized count + 1)",
+      "samples_in_raw_file": 1218,
+      "features_in_raw_file": 20530
+    },
+    "miRNA": {
+      "xena_id": "TCGA.BRCA.sampleMap/miRNA_HiSeq_gene",
+      "hub": "https://tcga.xenahubs.net",
+      "unit": "log2(RPM + 1)",
+      "samples_in_raw_file": 832,
+      "features_in_raw_file": 2238
+    },
+    "methylation": {
+      "xena_id": "TCGA.BRCA.sampleMap/HumanMethylation450",
+      "hub": "https://tcga.xenahubs.net",
+      "unit": "beta value [0, 1]",
+      "samples_in_raw_file": 888,
+      "features_in_raw_file": 485577,
+      "processed_file": "TCGA_BRCA_methylation_selected.tsv",
+      "features_selected": 1000,
+      "selection_method": "top 1000 cg* probes by variance across 619 common samples"
+    },
+    "clinical": {
+      "xena_id": "TCGA.BRCA.sampleMap/BRCA_clinicalMatrix",
+      "hub": "https://tcga.xenahubs.net",
+      "PAM50_column": "PAM50Call_RNAseq"
+    }
+  },
+  "final_modality_dimensions": {
+    "RNA-seq": {
+      "samples": 617,
+      "features": 20530
+    },
+    "miRNA": {
+      "samples": 617,
+      "features": 2238
+    },
+    "methylation": {
+      "samples": 617,
+      "features": 1000
+    }
+  },
+  "PAM50_coverage": {
+    "samples_with_label": 379,
+    "samples_without_label": 238,
+    "subtype_distribution": {
+      "LumA": 188,
+      "LumB": 97,
+      "Basal": 55,
+      "Her2": 25,
+      "Normal": 14
+    }
+  },
+  "frozen_sample_ids_file": "TCGA_BRCA_cohort_metadata.tsv",
+  "notes": "PAM50 labels are reserved for post-hoc biological interpretation only. They must NOT be used as input or training targets for the VAE. 238 samples lack PAM50 labels; these will still be included in VAE training but excluded from PAM50 post-hoc validation."
+}
