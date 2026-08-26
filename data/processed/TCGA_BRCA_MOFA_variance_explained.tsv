@@ -1,0 +1,16 @@
+view	factor	variance_explained
+Methylation	Factor1	0.186136
+Methylation	Factor2	0.036028
+Methylation	Factor3	0.094540
+Methylation	Factor4	0.015101
+Methylation	Factor5	0.075316
+RNA-seq	Factor1	0.206899
+RNA-seq	Factor2	0.109288
+RNA-seq	Factor3	0.027801
+RNA-seq	Factor4	0.048698
+RNA-seq	Factor5	0.005419
+miRNA	Factor1	0.113814
+miRNA	Factor2	0.062952
+miRNA	Factor3	0.021983
+miRNA	Factor4	0.023570
+miRNA	Factor5	0.010015

@@ -1,0 +1,28 @@
+{
+  "created": "2026-08-26",
+  "package": "mofapy2",
+  "package_version": "0.7.5",
+  "n_samples": 617,
+  "n_factors": 5,
+  "feature_counts": {
+    "RNA-seq": 100,
+    "miRNA": 30,
+    "Methylation": 100
+  },
+  "feature_selection": "Top N most variable features per modality (variance-based, no labels)",
+  "standardisation": "StandardScaler per view (fit on all 617 samples, exploratory mode)",
+  "convergence_mode": "fast",
+  "seed": 42,
+  "no_train_test_split": true,
+  "pam50_in_training": false,
+  "strongest_factor": "Factor1",
+  "total_r2_per_factor": {
+    "Factor1": 0.50685,
+    "Factor2": 0.208269,
+    "Factor3": 0.144323,
+    "Factor4": 0.087369,
+    "Factor5": 0.09075
+  },
+  "training_time_seconds": 2.5,
+  "total_runtime_seconds": 16.6
+}

@@ -1,0 +1,32 @@
+{
+  "dataset": "TCGA-BRCA",
+  "cohort_size": 617,
+  "representation_dimensions": {
+    "RNA": 1000,
+    "miRNA": 300,
+    "Methylation": 1000
+  },
+  "representation_total_dimensions": 2300,
+  "kernel_type": "RBF/Gaussian",
+  "gamma_values": {
+    "RNA": 0.00025957496123514404,
+    "miRNA": 0.0008988715943797825,
+    "Methylation": 0.0002638768051630387
+  },
+  "gamma_heuristic": "1 / (2 * median positive squared pairwise distance)",
+  "integration_method": "Equal-weight average after trace normalization",
+  "nearest_neighbors_k": 5,
+  "graph_patients": 617,
+  "graph_directed_edges": 3085,
+  "displayed_patients": 150,
+  "pam50_used_during_kernel_construction": false,
+  "pam50_role": "Post-hoc external biological interpretation only",
+  "labelled_samples_for_interpretation": 379,
+  "mean_within_subtype_similarity": 0.6510176062583923,
+  "mean_between_subtype_similarity": 0.5760325193405151,
+  "within_between_difference": 0.0749850869178772,
+  "same_subtype_neighbour_rate": 0.6729602157788267,
+  "random_same_subtype_baseline": 0.33833654736461033,
+  "neighbour_enrichment_over_random": 1.9890260777935032,
+  "selection_note": "No additional feature selection; existing Notebook 1 processed features used"
+}

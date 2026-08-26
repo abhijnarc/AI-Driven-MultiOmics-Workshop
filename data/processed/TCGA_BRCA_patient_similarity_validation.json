@@ -1,0 +1,7 @@
+{
+  "labelled_patients": 379,
+  "labelled_directed_edges": 1483,
+  "same_subtype_neighbour_rate": 0.6729602157788267,
+  "random_baseline": 0.33833654736461033,
+  "enrichment_over_random": 1.9890260777935032
+}
