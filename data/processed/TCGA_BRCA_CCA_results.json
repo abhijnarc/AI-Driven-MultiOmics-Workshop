@@ -1,0 +1,29 @@
+{
+  "created": "2026-08-26",
+  "n_samples": 617,
+  "rna_feature_count": 100,
+  "mirna_feature_count": 30,
+  "n_canonical_components": 5,
+  "canonical_correlations": {
+    "CV1": 0.951892,
+    "CV2": 0.874637,
+    "CV3": 0.815717,
+    "CV4": 0.785054,
+    "CV5": 0.747997
+  },
+  "feature_selection_criterion": "Top 100 RNA genes and top 30 miRNAs by variance",
+  "standardisation": "StandardScaler applied independently to each modality",
+  "random_seed": 42,
+  "no_train_test_split": true,
+  "pam50_used_in_cca": false,
+  "total_runtime_seconds": 59.6,
+  "output_files": {
+    "scores": "TCGA_BRCA_CCA_scores.tsv",
+    "loadings": "TCGA_BRCA_CCA_loadings.tsv",
+    "figures": [
+      "TCGA_BRCA_CCA_CV1_scatter.png",
+      "TCGA_BRCA_CCA_loadings_CV1.png",
+      "TCGA_BRCA_CCA_CV1_PAM50.png"
+    ]
+  }
+}
