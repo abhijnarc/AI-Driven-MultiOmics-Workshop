@@ -1,0 +1,57 @@
+{
+  "n_samples": 617,
+  "input_views": {
+    "RNA-seq": [
+      617,
+      100
+    ],
+    "miRNA": [
+      617,
+      30
+    ],
+    "Methylation": [
+      617,
+      100
+    ]
+  },
+  "architecture": {
+    "tokens": 3,
+    "d_model": 32,
+    "self_attention_layers": 1,
+    "attention_heads": 4,
+    "feed_forward_width": 64,
+    "integrated_representation_dim": 32
+  },
+  "objective": "Mean reconstruction MSE across the three standardised modality views",
+  "training": {
+    "max_epochs": 300,
+    "selected_epoch": 300,
+    "patience": 30,
+    "learning_rate": 0.001,
+    "seconds": 6.857,
+    "validation_reconstruction_mse": 0.419442
+  },
+  "mean_pooling_attention": {
+    "RNA-seq": 0.273559,
+    "miRNA": 0.521282,
+    "Methylation": 0.205159
+  },
+  "mean_self_attention": [
+    [
+      0.23706500232219696,
+      0.4144569933414459,
+      0.3484790027141571
+    ],
+    [
+      0.33867698907852173,
+      0.3126389980316162,
+      0.34868401288986206
+    ],
+    [
+      0.3415380120277405,
+      0.47036799788475037,
+      0.18809500336647034
+    ]
+  ],
+  "pam50_used_during_training": false
+}

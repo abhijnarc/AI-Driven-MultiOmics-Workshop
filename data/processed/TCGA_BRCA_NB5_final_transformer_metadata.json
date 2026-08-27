@@ -1,0 +1,50 @@
+{
+  "seed": 2026,
+  "splits": {
+    "train": 242,
+    "validation": 61,
+    "test": 76
+  },
+  "architecture": {
+    "tokens": [
+      "CLS",
+      "RNA",
+      "miRNA",
+      "methylation"
+    ],
+    "d_model": 64,
+    "layers": 2,
+    "heads": 4,
+    "feed_forward_dim": 128,
+    "CLS_token": true,
+    "learnable_type_embeddings": true
+  },
+  "training": {
+    "max_epochs": 150,
+    "selected_epoch": 12,
+    "patience": 20,
+    "seconds": 1.763,
+    "class_weighted_cross_entropy": true
+  },
+  "test_metrics": {
+    "accuracy": 0.7894736842105263,
+    "balanced_accuracy": 0.7298883572567783,
+    "macro_f1": 0.7529606625258799,
+    "weighted_f1": 0.7836588754494932
+  },
+  "mean_cls_attention": {
+    "RNA": 0.35986852645874023,
+    "miRNA": 0.3113030195236206,
+    "methylation": 0.32882845401763916
+  },
+  "pam50_use": "Supervised target only; excluded from scaling and representation construction",
+  "outputs": [
+    "TCGA_BRCA_NB5_final_transformer_predictions.tsv",
+    "TCGA_BRCA_NB5_final_comparison.tsv",
+    "TCGA_BRCA_NB5_final_attention_weights.tsv",
+    "TCGA_BRCA_NB5_final_transformer_confusion_matrix.png",
+    "TCGA_BRCA_NB5_final_transformer_training.png",
+    "TCGA_BRCA_NB5_final_transformer_attention.png",
+    "TCGA_BRCA_NB5_final_comparison.png"
+  ]
+}

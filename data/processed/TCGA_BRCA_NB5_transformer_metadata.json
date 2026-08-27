@@ -1,0 +1,108 @@
+{
+  "random_seed": 2026,
+  "cohort_samples": 617,
+  "labelled_samples": 379,
+  "train_samples": 242,
+  "validation_samples": 61,
+  "test_samples": 76,
+  "class_names": [
+    "Basal",
+    "Her2",
+    "LumA",
+    "LumB",
+    "Normal"
+  ],
+  "class_distribution": {
+    "Basal": 55,
+    "Her2": 25,
+    "LumA": 188,
+    "LumB": 97,
+    "Normal": 14
+  },
+  "architecture": {
+    "modality_encoders": {
+      "RNA": [
+        1000,
+        64
+      ],
+      "miRNA": [
+        300,
+        64
+      ],
+      "methylation": [
+        1000,
+        64
+      ]
+    },
+    "tokens": [
+      "CLS",
+      "RNA",
+      "miRNA",
+      "methylation"
+    ],
+    "transformer_layers": 2,
+    "attention_heads": 4,
+    "d_model": 64,
+    "feed_forward_dimension": 128,
+    "dropout": 0.1,
+    "classifier": [
+      64,
+      5
+    ]
+  },
+  "hyperparameters": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.002,
+    "weight_decay": 0.0001,
+    "max_epochs": 80,
+    "patience": 12
+  },
+  "best_epoch": 6,
+  "test_metrics": {
+    "accuracy": 0.8026315789473685,
+    "balanced_accuracy": 0.6305263157894737,
+    "macro_precision": 0.6783216783216783,
+    "macro_recall": 0.6305263157894737,
+    "macro_f1": 0.6412078977932636,
+    "weighted_f1": 0.7802753835809033
+  },
+  "ablation_results": [
+    {
+      "model": "RNA only",
+      "accuracy": 0.8289473684210527,
+      "balanced_accuracy": 0.7319298245614035,
+      "macro_f1": 0.7759094348408124,
+      "best_epoch": 7
+    },
+    {
+      "model": "RNA + miRNA",
+      "accuracy": 0.7763157894736842,
+      "balanced_accuracy": 0.5747368421052631,
+      "macro_f1": 0.5882429335370511,
+      "best_epoch": 5
+    },
+    {
+      "model": "RNA + methylation",
+      "accuracy": 0.8026315789473685,
+      "balanced_accuracy": 0.6571929824561404,
+      "macro_f1": 0.6960340775558167,
+      "best_epoch": 7
+    },
+    {
+      "model": "RNA + miRNA + methylation",
+      "accuracy": 0.8026315789473685,
+      "balanced_accuracy": 0.6305263157894737,
+      "macro_f1": 0.6412078977932636,
+      "best_epoch": 6
+    }
+  ],
+  "total_runtime_seconds": 11.931,
+  "outputs": {
+    "metrics": "data/processed/TCGA_BRCA_NB5_transformer_metrics.json",
+    "predictions": "data/processed/TCGA_BRCA_NB5_transformer_predictions.tsv",
+    "metadata": "data/processed/TCGA_BRCA_NB5_transformer_metadata.json",
+    "ablation_table": "data/processed/TCGA_BRCA_NB5_modality_ablation.tsv",
+    "attention_heatmap": "data/processed/figures/TCGA_BRCA_NB5_attention_heatmap.png",
+    "figures": "data/processed/figures"
+  }
+}

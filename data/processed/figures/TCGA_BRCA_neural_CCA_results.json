@@ -1,0 +1,31 @@
+{
+  "n_samples": 617,
+  "input_matrices": {
+    "RNA": [
+      617,
+      100
+    ],
+    "miRNA": [
+      617,
+      30
+    ]
+  },
+  "architecture": {
+    "RNA_encoder": "100 -> 32 ReLU -> 2",
+    "miRNA_encoder": "30 -> 16 ReLU -> 2"
+  },
+  "objective": "Negative mean matched-dimension Pearson correlation",
+  "training": {
+    "max_epochs": 300,
+    "selected_epoch": 179,
+    "patience": 30,
+    "learning_rate": 0.001,
+    "seconds": 1.128,
+    "validation_mean_correlation": 0.914645
+  },
+  "first_component_correlation": {
+    "linear_CCA": 0.951892,
+    "neural_projection": 0.967155
+  },
+  "pam50_used_during_training": false
+}

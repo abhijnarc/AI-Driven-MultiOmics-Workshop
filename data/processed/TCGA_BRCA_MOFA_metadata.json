@@ -1,5 +1,5 @@
 {
-  "created": "2026-08-26",
+  "created": "2026-08-27",
   "package": "mofapy2",
   "package_version": "0.7.5",
   "n_samples": 617,
@@ -23,6 +23,6 @@
     "Factor4": 0.087369,
     "Factor5": 0.09075
   },
-  "training_time_seconds": 2.5,
-  "total_runtime_seconds": 16.6
+  "training_time_seconds": 2.8,
+  "total_runtime_seconds": 20.0
 }

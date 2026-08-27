@@ -1,0 +1,42 @@
+{
+  "n_patients": 617,
+  "graph": {
+    "original_directed_knn_edges": 3085,
+    "message_passing_edges": 6077,
+    "neighbours_per_patient": 5
+  },
+  "architecture": {
+    "layers": 2,
+    "heads_per_layer": 2,
+    "hidden_dim": 32,
+    "embedding_dim": 32,
+    "node_feature_dim": 617
+  },
+  "objective": "Sampled link reconstruction of existing nearest-neighbour graph",
+  "training": {
+    "max_epochs": 250,
+    "selected_epoch": 244,
+    "seconds": 19.315,
+    "link_reconstruction_loss": 1.102064
+  },
+  "mean_attention_by_neighbour_rank": {
+    "1": 0.120146,
+    "2": 0.120582,
+    "3": 0.118717,
+    "4": 0.117979,
+    "5": 0.118173
+  },
+  "posthoc_pam50_metrics": {
+    "kernel_PCA": {
+      "silhouette": 0.13282997906208038,
+      "ARI": 0.2714908984757926,
+      "NMI": 0.4034119031506923
+    },
+    "GAT_PCA": {
+      "silhouette": 0.1389903724193573,
+      "ARI": 0.21170770602059683,
+      "NMI": 0.35249957019119876
+    }
+  },
+  "pam50_used_during_training": false
+}

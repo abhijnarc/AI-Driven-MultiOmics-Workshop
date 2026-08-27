@@ -1,0 +1,16 @@
+===LOG===  
+ Volume in drive C is OS
+ Volume Serial Number is DEE9-554E
+python.exe                   18916 Console                    8      3,292 K
+python.exe                   17472 Console                    8      1,752 K
+python.exe                   16204 Console                    8      3,576 K
+python.exe                    6236 Console                    8        888 K
+python.exe                     852 Console                    8      2,784 K
+python.exe                   13936 Console                    8        876 K
+python.exe                   20764 Console                    8      3,060 K
+python.exe                   17640 Console                    8        944 K
+python.exe                   16840 Console                    8      4,468 K
+python.exe                    3480 Console                    8      1,136 K
+python.exe                   17736 Console                    8     17,508 K
+python.exe                    1688 Console                    8      3,268 K
+python.exe                   14340 Console                    8   1,20,148 K

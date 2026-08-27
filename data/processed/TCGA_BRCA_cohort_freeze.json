@@ -1,6 +1,6 @@
 {
   "cohort_name": "TCGA-BRCA frozen cohort v1",
-  "freeze_date": "2026-08-26",
+  "freeze_date": "2026-08-27",
   "final_cohort_size": 617,
   "description": "617 unique TCGA-BRCA primary tumour samples present in all three molecular modalities: RNA-seq, miRNA, and DNA methylation (HM450).",
   "inclusion_rule": "Sample must (1) be a primary solid tumour (TCGA sample type code -01), (2) have a sample barcode present in all three raw modality files downloaded from UCSC Xena TCGA Hub.",

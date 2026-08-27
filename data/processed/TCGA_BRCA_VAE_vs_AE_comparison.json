@@ -1,0 +1,9 @@
+{
+  "vae_val_recon_mse": 0.592796,
+  "ae_val_recon_mse": 0.581428,
+  "delta_ae_minus_vae": -0.011368,
+  "pct_difference": -1.92,
+  "vae_best_epoch": 69,
+  "ae_best_epoch": 36,
+  "ae_params": 1215878
+}

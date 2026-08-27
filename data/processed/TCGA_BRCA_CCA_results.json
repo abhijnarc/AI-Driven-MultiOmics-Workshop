@@ -1,5 +1,5 @@
 {
-  "created": "2026-08-26",
+  "created": "2026-08-27",
   "n_samples": 617,
   "rna_feature_count": 100,
   "mirna_feature_count": 30,
@@ -16,7 +16,7 @@
   "random_seed": 42,
   "no_train_test_split": true,
   "pam50_used_in_cca": false,
-  "total_runtime_seconds": 59.6,
+  "total_runtime_seconds": 5.0,
   "output_files": {
     "scores": "TCGA_BRCA_CCA_scores.tsv",
     "loadings": "TCGA_BRCA_CCA_loadings.tsv",

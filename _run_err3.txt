@@ -1,0 +1,8 @@
+C:\Users\abhij\iisc\AI-Driven-MultiOmics-Workshop\scripts_tmp_ae_cells.py:260: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+C:\Users\abhij\iisc\AI-Driven-MultiOmics-Workshop\.venv\Lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\abhij\iisc\AI-Driven-MultiOmics-Workshop\.venv\Lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\abhij\iisc\AI-Driven-MultiOmics-Workshop\scripts_tmp_ae_cells.py:324: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()

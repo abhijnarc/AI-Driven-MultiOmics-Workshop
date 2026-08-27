@@ -1,0 +1,18 @@
+{
+ "setup": {
+  "outputs": "Figures dir : C:\\Users\\abhij\\iisc\\AI-Driven-MultiOmics-Workshop\\data\\processed\\figures\nCohort      : 617 samples | input dim 2300 | latent 10\nTrain/val   : 493/124 (same split & scaling as VAE)\n",
+  "error": null
+ },
+ "ae_train": {
+  "outputs": "AE architecture:\nAE(\n  (encoder): Sequential(\n    (0): Linear(in_features=2300, out_features=256, bias=True)\n    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)\n    (2): ReLU()\n    (3): Linear(in_features=256, out_features=64, bias=True)\n    (4): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)\n    (5): ReLU()\n    (6): Linear(in_features=64, out_features=10, bias=True)\n  )\n  (decoder): Sequential(\n    (0): Linear(in_features=10, out_features=64, bias=True)\n    (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)\n    (2): ReLU()\n    (3): Linear(in_features=64, out_features=256, bias=True)\n    (4): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)\n    (5): ReLU()\n    (6): Linear(in_features=256, out_features=2300, bias=True)\n  )\n)\n\nTrainable parameters: 1,215,878\nEpoch   1 | train recon=1.01987 | val recon=0.87790\nEpoch  10 | train recon=0.62030 | val recon=0.62044\nEpoch  20 | train recon=0.54904 | val recon=0.59078\nEpoch  30 | train recon=0.51698 | val recon=0.58419\nEpoch  40 | train recon=0.49066 | val recon=0.58308\nEpoch  50 | train recon=0.47661 | val recon=0.58371\nEarly stopping at epoch 51 (no improvement for 15 epochs)\n\nTraining finished: 51 epochs in 18.4s\nBest epoch: 36 | best val recon (MSE): 0.58143\n",
+  "error": null
+ },
+ "compare": {
+  "outputs": "Reconstruction loss on validation set (MSE, mean over elements)\n=======================================================\n  VAE : 0.59280   (best epoch 69)\n  AE  : 0.58143   (best epoch 36)\n  \u0394 (AE \u2212 VAE): -0.01137 (-1.92%)\n\nInterpretation: reconstruction quality is essentially comparable.\nThe VAE's advantage lies in its smooth, probabilistic latent space\n(regularised by the KL term toward N(0,I)), not in lower MSE.\n\u2705 Saved: data/processed/figures/VAE_vs_AE_reconstruction.png\n\u2705 Saved: data/processed/TCGA_BRCA_VAE_vs_AE_comparison.json\n",
+  "error": null
+ },
+ "umap": {
+  "outputs": "\u2705 Saved: data/processed/figures/VAE_vs_AE_UMAP_PAM50.png\n\nPost-hoc PAM50 agreement (k-means k=5 on 10-D latent; labels NOT used in fitting):\n       ARI_vs_PAM50  NMI_vs_PAM50\nmodel                            \nVAE          0.2396        0.3860\nAE           0.2741        0.4377\n\n\u26a0\ufe0f  PAM50 used strictly post-hoc as an external biological reference.\n\u2705 Saved: data/processed/TCGA_BRCA_VAE_vs_AE_PAM50_posthoc.tsv\n",
+  "error": null
+ }
+}
