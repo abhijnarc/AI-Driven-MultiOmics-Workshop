@@ -1,0 +1,55 @@
+{
+  "dataset": "TCGA-BRCA",
+  "cohort": "TCGA-BRCA frozen cohort v1",
+  "total_frozen_samples": 617,
+  "pam50_labelled_samples": 379,
+  "pam50_unlabelled_samples": 238,
+  "train_samples": 303,
+  "test_samples": 76,
+  "features": {
+    "RNA": 1000,
+    "miRNA": 300,
+    "methylation": 1000,
+    "total": 2300
+  },
+  "pam50_classes": [
+    "Basal",
+    "Her2",
+    "LumA",
+    "LumB",
+    "Normal"
+  ],
+  "train_class_counts": {
+    "LumA": 150,
+    "LumB": 78,
+    "Basal": 44,
+    "Her2": 20,
+    "Normal": 11
+  },
+  "test_class_counts": {
+    "LumA": 38,
+    "LumB": 19,
+    "Basal": 11,
+    "Her2": 5,
+    "Normal": 3
+  },
+  "model": {
+    "type": "MLPClassifier",
+    "hidden_layer_sizes": [
+      64
+    ],
+    "activation": "relu",
+    "solver": "adam",
+    "alpha": 0.001,
+    "learning_rate_init": 0.001,
+    "early_stopping": true,
+    "random_state": 42,
+    "iterations": 42
+  },
+  "metrics": {
+    "accuracy": 0.7894736842105263,
+    "balanced_accuracy": 0.6737480063795853,
+    "macro_f1": 0.6911129376952163,
+    "majority_class_baseline_accuracy": 0.5
+  }
+}

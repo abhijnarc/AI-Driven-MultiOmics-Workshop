@@ -1,0 +1,12 @@
+{
+  "n_test_patients": 76,
+  "correct_predictions": 60,
+  "accuracy": 0.7894736842105263,
+  "balanced_accuracy": 0.6737480063795853,
+  "macro_precision": 0.7833861260690529,
+  "macro_recall": 0.6737480063795853,
+  "macro_f1": 0.6911129376952163,
+  "weighted_f1": 0.786018844579804,
+  "pam50_used_during_representation_learning": false,
+  "evaluation_type": "held-out test set"
+}
