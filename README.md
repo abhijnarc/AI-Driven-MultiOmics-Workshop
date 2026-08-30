@@ -46,18 +46,3 @@ Represents patients as nodes in a molecular similarity graph and demonstrates ho
 
 Demonstrates self-attention for integrating multiple omics representations and predicting molecular breast-cancer subtypes.
 
----
-
-## Plant Multi-Omics Demonstration
-
-A supplementary demonstration uses real **Arabidopsis thaliana WallOmics** data containing matched transcriptomics, proteomics and metabolomics measurements.
-
-The demonstration uses a **MOGONET-style graph-based architecture** to show how AI-driven multi-omics integration can also be applied to plant and agricultural research.
-
----
-
-## Data
-
-The repository contains frozen, processed workshop inputs. Participants do not need to download or preprocess the original raw datasets.
-
-Simply clone/download the repository and run the notebooks using the supplied data.
