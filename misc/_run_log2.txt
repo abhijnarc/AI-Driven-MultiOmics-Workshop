@@ -1,6 +1,0 @@
-[OK] setup
-[OK] ae_train
-[OK] compare
-[FAIL] umap: name 'vae' is not defined
-
-Done — results written to _cell_results.json

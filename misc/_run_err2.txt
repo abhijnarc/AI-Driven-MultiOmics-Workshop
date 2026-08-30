@@ -1,2 +1,0 @@
-C:\Users\abhij\iisc\AI-Driven-MultiOmics-Workshop\scripts_tmp_ae_cells.py:259: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-  plt.show()
